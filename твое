@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Access</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:black;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+
+input{
+    padding:15px;
+    font-size:22px;
+    text-align:center;
+    border:none;
+    outline:none;
+    background:#111;
+    color:white;
+    width:200px;
+}
+
+button{
+    margin-top:15px;
+    padding:15px 25px;
+    font-size:18px;
+    border:none;
+    cursor:pointer;
+    background:white;
+    color:black;
+}
+</style>
+</head>
+
+<body>
+
+<div>
+    <input id="code" type="password" placeholder="код">
+    <br>
+    <button onclick="check()">Отправить ???</button>
+</div>
+
+<script>
+const correctCode = "1941";
+
+function check(){
+    const value = document.getElementById("code").value;
+
+    if(value === correctCode){
+        window.location.href = "scene.html";
+    } else {
+        document.getElementById("code").value = "";
+    }
+}
+</script>
+
+</body>
+</html>
